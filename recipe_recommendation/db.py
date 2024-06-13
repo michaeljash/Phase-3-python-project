@@ -43,5 +43,18 @@ def create_tables():
     conn.commit()
     conn.close()
 
+
+class Recipe:
+    def _init_(self):
+        self.CONN = sqlite3.connect("recipes.db")
+        self.CURSOR = self.CONN.cursor()
+
+class Users ):
+    def __init__(self,name,description,id):
+        self.name = name
+        self.description = description
+        self.id = id
+
+
 if __name__ == "__main__":
     create_tables()
